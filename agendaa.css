@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+.header{
+    background-color: rgb(94, 94, 94);
+    grid-area: header;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding:0;
+}
+
+.agenda-block {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto;
+    gap: 1px 1px;
+    grid-template-areas:
+    ". header"
+    "horaires-conteneur main";
+}
+
+.semaine-jours,
+.jours-numéros {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(160, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.semaine-jours {
+    text-align: center;
+    font-size: 2Opx;
+    color:rgb(160, 0, 0);
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.conteneur-horaires {
+    background-color:rgb(94, 94, 94);
+    color: rgb(160, 0, 0);
+    grid-area: horaires-conteneur;
+    justify-content: left;
+    text-align: center;
+}
+
+.conteneur {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteneur li {
+    min-height: 60px;
+}
+
+.conteneur li:after {
+    content:"";
+    position: absolute;
+    left:5%;
+    width: 94%;
+    height: 1px;
+    background:rgb(160, 0, 0);
+    z-index: 1;
+}
+
+.conteneur-évènement {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(36, 1fr);
+    grid-area: main;
+    position: relative;
+}
+
+span{
+
+    text-align: center;
+}
+
+.créneaux {
+    font-size: 15px;
+    position: absolute;
+    background:rgb(212, 8, 8);
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.blabla-1 {
+    text-align: center;
+    height: 177px;
+    grid-row: 1;
+    grid-column: 1;
+    width: 14%;
+}
+
+.blabla-2 {
+    text-align: center;
+    height: 174px;
+    grid-row: 15;
+    grid-column: 1;
+    width: 14%;
+}
+
+.blabla-3 {
+    text-align: center;
+    height: 237px;
+    grid-row: 1;
+    grid-column: 2;
+    width: 16%;
+}
+
+.blabla-X
+{
+    text-align: center;
+    height: 237px;
+    grid-row: 15;
+    grid-column: 2;
+    width: 16%;
+}
+.blabla-4 {
+    text-align: center;
+    height: 116px;
+    grid-row: 26;
+    grid-column: 1;
+    width: 14%;
+}
+
+.blabla-5 {
+    text-align: center;
+    height: 83%;
+    grid-row: 4;
+    grid-column: 4;
+    width: 24%;
+}
+
+.blabla-6 {
+    text-align: center;
+    height: 235px;
+    grid-row: 15;
+    grid-column: 5;
+    width: 32%;
+}
+
+.blabla-7 {
+    text-align: center;
+    height: 114px;
+    grid-row: 15;
+    grid-column: 6;
+    width: 48%;
+}
+
+.blabla-8 {
+    text-align: center;
+    height: 238px;
+    grid-row: 1;
+    grid-column: 7;
+    width: 100%;
+}
+
+form {
+    background: rgb(156, 55, 55);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60%;
+    width: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+}
+.grand-titre{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dislocation {
+    width: 100%;
+    height: 1px;
+    background-color:rgb(128, 0, 0);
+}
+
+.formulaire-corps {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.team {
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    margin-top: 5px;
+    padding: 5px 5px 5px 30px;
+    border: 1px solid rgb(128, 0, 0);
+    border-radius: 20px;
+}
+
+i{
+    position: absolute;
+    left: 0;
+    top: 25px;
+    padding: 6px 9px;
+    color:rgb(128, 0, 0);
+}
+
+.left {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.left .team {
+    height: 100%;
+}
+
+textarea {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 2px solid rgb(128, 0, 0);
+    border-radius: 10px;
+    resize: none;
+}
+
+button {
+    margin-top: 5px;
+    background-color: rgb(156, 55, 55);
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+    border:none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
